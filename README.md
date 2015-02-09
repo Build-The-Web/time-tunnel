@@ -12,6 +12,13 @@ An event collection and dispatching µservice.
 and then dispatches those events on a best-effort basis
 to various event sinks according to a ruleset that is part of the configuration.
 
+The main goal is to offer clients a way to easily push their events to *one* uniform event submission API of their choosing,
+and then go back and concentrate on their actual task. Once those events hit the dispatcher,
+they can be filtered and duplicated according to the needs of the event sinks.
+
+There's a set of built-in implementations for both delivery APIs and event sinks, and they can
+be extended with custom ones via a plugin system.
+
 
 ## Events
 
