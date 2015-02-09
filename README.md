@@ -1,6 +1,10 @@
 # time-tunnel
 
+![logo](https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/logo-160.png)
 An event collection and dispatching µservice.
+
+![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+
 
 ## Overview
 
@@ -24,3 +28,20 @@ The canonical representation of an event is a flat JSON object with the followin
 `timestamp` and `message` are obligatory, but `timestamp` is added server-side when it's missing.
 All other fields are optional, but if the semantics fit, the field name as defined above should be used.
 Any additional number of fields can be added.
+
+
+## Installation
+**TODO**
+
+
+## Usage
+**TODO**
+
+
+## Contributing
+**TODO**
+
+
+## Acknowledgements
+
+[![1&1](https://raw.githubusercontent.com/1and1/1and1.github.io/master/images/1and1-logo-42.png)](https://github.com/1and1)  Project sponsored by [1&1](https://github.com/1and1).
