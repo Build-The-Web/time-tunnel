@@ -49,6 +49,16 @@ Any additional number of fields can be added.
 **TODO**
 
 
+## Related Projects
+
+* [HipChat](https://github.com/hipchat)
+* [InfluxDB](https://github.com/influxdb)
+* [Sentry](https://github.com/getsentry/sentry)
+* [Timesketch](https://github.com/google/timesketch)
+* [StatsD](https://github.com/etsy/statsd)
+* [Fluentd](https://github.com/fluent/fluentd)
+
+
 ## Acknowledgements
 
 [![1&1](https://raw.githubusercontent.com/1and1/1and1.github.io/master/images/1and1-logo-42.png)](https://github.com/1and1)  Project sponsored by [1&1](https://github.com/1and1).
