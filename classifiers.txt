@@ -1,0 +1,19 @@
+# Details at http://pypi.python.org/pypi?:action=list_classifiers
+Development Status :: 2 - Pre-Alpha
+#Development Status :: 3 - Alpha
+#Development Status :: 4 - Beta
+#Development Status :: 5 - Production/Stable
+Environment :: Console
+Environment :: No Input/Output (Daemon)
+Environment :: Web Environment
+Framework :: Flask
+Intended Audience :: Developers
+Intended Audience :: Information Technology
+Intended Audience :: System Administrators
+License :: OSI Approved :: Apache Software License
+Operating System :: OS Independent
+Programming Language :: Python :: 2.7
+Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Topic :: System :: Distributed Computing
+Topic :: System :: Logging
+Topic :: System :: Monitoring
