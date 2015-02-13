@@ -18,6 +18,7 @@ they can be filtered and duplicated according to the needs of the event sinks.
 
 There's a set of built-in implementations for both delivery APIs and event sinks, and they can
 be extended with custom ones via a plugin system.
+`time-tunnel` is implemented using Python (tested on 2.7 and 3.4) and Flask+WSME.
 
 ![System Landscape](https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/system-landscape.png)
 
