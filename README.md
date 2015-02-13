@@ -36,7 +36,7 @@ The canonical representation of an event is a flat JSON object with the followin
 
 `timestamp` and `message` are obligatory, but `timestamp` is added server-side when it's missing.
 All other fields are optional, but if the semantics fit, the field name as defined above should be used.
-Any additional number of fields can be added.
+Any additional number of fields can be included.
 
 
 ## Installation
