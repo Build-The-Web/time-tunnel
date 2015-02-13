@@ -59,13 +59,18 @@ invoke build --docs
 
 ## Related Projects
 
+**Event sources + sinks**
+
 * [HipChat](https://github.com/hipchat)
 * [InfluxDB](https://github.com/influxdb)
 * [Sentry](https://github.com/getsentry/sentry)
-* [Timesketch](https://github.com/google/timesketch)
 * [StatsD](https://github.com/etsy/statsd)
 * [Fluentd](https://github.com/fluent/fluentd)
 
+**Visualization / UI**
+
+* [EventDrops](https://github.com/marmelab/EventDrops)
+* [Timesketch](https://github.com/google/timesketch)
 
 ## Acknowledgements
 
