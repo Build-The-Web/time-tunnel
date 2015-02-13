@@ -19,6 +19,8 @@ they can be filtered and duplicated according to the needs of the event sinks.
 There's a set of built-in implementations for both delivery APIs and event sinks, and they can
 be extended with custom ones via a plugin system.
 
+![System Landscape](https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/system-landscape.png)
+
 
 ## Events
 
