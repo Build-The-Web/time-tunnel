@@ -35,7 +35,9 @@ The canonical representation of an event is a flat JSON object with the followin
 * `view_link` – URL of a view in the source system.
 * `ack_link` – URL for acknowledging alarm events.
 
-`timestamp` and `message` are obligatory, but `timestamp` is added server-side when it's missing.
+`timestamp`, `kind` and `message` are obligatory,
+but `timestamp` is added server-side when it's missing,
+and `kind` defaults to `unknown`.
 All other fields are optional, but if the semantics fit, the field name as defined above should be used.
 Any additional number of fields can be included.
 
@@ -45,9 +47,9 @@ Any additional number of fields can be included.
 To create a development environment, use these commands:
 
 ```sh
-git clone https://github.com/Feed-The-Web/time-tunnel.git
+git clone "https://github.com/Feed-The-Web/time-tunnel.git"
 cd time-tunnel; deactivate; /usr/bin/virtualenv .; . ./bin/activate
-./bin/pip install -U pip; ./bin/pip install -r dev-requirements.txt
+./bin/pip install -U pip; ./bin/pip install -r "dev-requirements.txt"
 invoke build --docs
 ```
 
