@@ -18,6 +18,7 @@
 """
 import os
 import re
+import sys
 
 # Project data (the rest is parsed from __init__.py and other project files)
 name = 'timetunnel'
@@ -25,6 +26,7 @@ name = 'timetunnel'
 # Import setuptools
 try:
     from setuptools import setup, find_packages
+    from setuptools.command.test import test as TestCommand
 except ImportError, exc:
     raise RuntimeError("Cannot install '{0}', setuptools is missing ({1})".format(name, exc))
 
@@ -33,6 +35,25 @@ project_root = os.path.abspath(os.path.dirname(__file__))
 def srcfile(*args):
     "Helper for path building."
     return os.path.join(*((project_root,) + args))
+
+class PyTest(TestCommand):
+    user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        self.pytest_args = []
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        # import locally, cause outside the eggs aren't loaded
+        import pytest
+        errno = pytest.main(self.pytest_args)
+        if errno:
+            sys.exit(errno)
 
 def _build_metadata():
     "Return project's metadata as a dict."
@@ -62,7 +83,14 @@ def _build_metadata():
         requires[key] = []
         if os.path.exists(srcfile(filename)):
             with open(srcfile(filename), 'r') as handle:
-                requires[key] = [i.strip() for i in handle if i.strip() and not i.startswith('#')]
+                for line in handle:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        if line.startswith('-e'):
+                            line = line.split()[1].split('#egg=')[1]
+                        requires[key].append(line)
+    if 'pytest' not in requires['test']:
+        requires['test'].append('pytest')
 
     # Complete project metadata
     with open(srcfile('classifiers.txt'), 'r') as handle:
@@ -80,6 +108,9 @@ def _build_metadata():
         setup_requires = requires['setup'],
         tests_require =  requires['test'],
         classifiers = classifiers,
+        cmdclass = dict(
+            test = PyTest,
+        ),
         entry_points = dict(
             console_scripts = [
                 'tictoc = timetunnel.__main__:cli',
