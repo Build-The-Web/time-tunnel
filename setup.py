@@ -114,6 +114,7 @@ def _build_metadata():
         entry_points = dict(
             console_scripts = [
                 'tictoc = timetunnel.__main__:cli',
+                'vortex = timetunnel.vortex.__main__:cli',
             ],
         ),
     ))
