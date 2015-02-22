@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-continuation
-""" Webserver CLI and standard boiler-plate.
+""" Main web application.
 """
 # Copyright ⓒ  2015 1&1 Group
 #
@@ -18,24 +18,12 @@
 
 import os
 
-from flask import Flask, send_from_directory
-from flask.ext.script import Manager
+from flask import Flask
 
-from timetunnel.vortex.app import app
-
-manager = Manager(app)
+app = Flask(__name__)
 
 
-@app.route('/favicon.ico')
-def favicon():
-    """Alias favicon image into root namespace."""
-    return send_from_directory(os.path.join(app.root_path, 'static', 'img'), 'favicon.ico', mimetype='image/x-icon')
-
-
-def cli():
-    """Entry point for development web server."""
-    return manager.run()
-
-
-if __name__ == '__main__':
-    cli()
+@app.route('/')
+def index():
+    """The root page."""
+    return '<h1>Move Along, Nothing to See Here!</h1>'
