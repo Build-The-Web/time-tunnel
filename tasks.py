@@ -8,8 +8,11 @@ from rituals.invoke_tasks import * # pylint: disable=redefined-builtin
 
 
 @task
-def serve():
+def serve(browse=False):
     """Start development web server."""
+    if browse:
+        import webbrowser
+        webbrowser.open("http://127.0.0.1:5000/")
     run("vortex runserver")
 
 @task
