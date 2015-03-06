@@ -75,6 +75,8 @@ for details on how to give back your improvements and fixes to upstream, so ever
 
 * [EventDrops](https://github.com/marmelab/EventDrops)
 * [Timesketch](https://github.com/google/timesketch)
+* [Anthracite](https://github.com/Dieterbe/anthracite)
+
 
 ## Acknowledgements
 
