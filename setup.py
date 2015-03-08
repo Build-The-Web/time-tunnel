@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
 """ timetunnel – An event collection and dispatching µservice.
 
     Copyright ⓒ  2015 1&1 Group
@@ -32,11 +33,13 @@ except ImportError, exc:
 
 # Helpers
 project_root = os.path.abspath(os.path.dirname(__file__))
+
 def srcfile(*args):
     "Helper for path building."
     return os.path.join(*((project_root,) + args))
 
 class PyTest(TestCommand):
+    """pytest integration into setuptool's `test` command."""
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
 
     def initialize_options(self):
