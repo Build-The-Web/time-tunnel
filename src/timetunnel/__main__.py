@@ -18,7 +18,7 @@
 
 import click
 
-APP_NAME = 'timetunnel'
+__app_name__ = 'tictoc'
 CONTEXT_SETTINGS = dict(
     help_option_names=['-h', '--help'],
 )
@@ -29,7 +29,7 @@ CONTEXT_SETTINGS = dict(
 @click.option('-v', '--verbose', is_flag=True, default=False, help='Create extra verbose output.')
 def cli(quiet=False, verbose=False): # pylint: disable=unused-argument
     """Access and control the time-tunnel µservice."""
-    appdir = click.get_app_dir(APP_NAME)
+    appdir = click.get_app_dir(__app_name__)
     #click.secho('appdir = {0}'.format(appdir), fg='yellow')
 
 

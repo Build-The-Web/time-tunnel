@@ -23,6 +23,7 @@ from flask.ext.script import Manager
 
 from timetunnel.vortex.app import app
 
+__app_name__ = 'vortex'
 manager = Manager(app)
 
 
