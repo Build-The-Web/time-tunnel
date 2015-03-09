@@ -48,8 +48,9 @@ To create a development environment, use these commands:
 
 ```sh
 git clone "https://github.com/Feed-The-Web/time-tunnel.git"
-cd time-tunnel; deactivate; /usr/bin/virtualenv .; . ./bin/activate
-./bin/pip install -U pip; ./bin/pip install -r "dev-requirements.txt"
+cd time-tunnel; deactivate; /usr/bin/virtualenv .venv/$(basename $PWD)
+. .venv/$(basename $PWD)/bin/activate
+pip install -U pip; pip install -r "dev-requirements.txt"
 invoke build --docs
 ```
 
