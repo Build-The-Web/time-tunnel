@@ -18,4 +18,4 @@ def serve(browse=False):
 @task
 def ci(): # pylint: disable=invalid-name
     """Perform continuous integration tasks."""
-    run("invoke clean --all build --docs test check")
+    run("invoke clean --all build --docs test check --reports")
