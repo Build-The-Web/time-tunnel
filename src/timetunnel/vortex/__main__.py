@@ -19,7 +19,8 @@
 import os
 
 from flask import Flask, send_from_directory
-from flask.ext.script import Manager
+from flask.ext.script import Manager # pylint: disable=import-error, no-name-in-module
+# pylint still doesn't handle namespace packages?! :(
 
 from timetunnel.vortex.app import app
 
