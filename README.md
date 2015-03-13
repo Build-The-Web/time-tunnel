@@ -70,6 +70,8 @@ for details on how to give back your improvements and fixes to upstream, so ever
 * [Sentry](https://github.com/getsentry/sentry)
 * [StatsD](https://github.com/etsy/statsd)
 * [Fluentd](https://github.com/fluent/fluentd)
+* [feedr](https://github.com/nir0s/feedr)
+* [python-beaver](https://github.com/josegonzalez/python-beaver)
 
 **Visualization / UI**
 
