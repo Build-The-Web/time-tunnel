@@ -4,6 +4,7 @@
 An event collection and dispatching µservice.
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+[![Travis CI](https://api.travis-ci.org/Feed-The-Web/time-tunnel.svg)](https://travis-ci.org/Feed-The-Web/time-tunnel)
 
 
 ## Overview
