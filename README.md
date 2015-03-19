@@ -54,7 +54,7 @@ cd time-tunnel
 invoke build --docs
 ```
 
-See [CONTRIBUTING.md](https://github.com/Feed-The-Web/time-tunnel/blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING](https://github.com/Feed-The-Web/time-tunnel/blob/master/CONTRIBUTING.md)
 for details on how to give back your improvements and fixes to upstream, so every user can benefit from them.
 
 
