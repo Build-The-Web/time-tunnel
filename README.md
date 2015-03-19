@@ -1,10 +1,10 @@
 # time-tunnel
 
-![logo](https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/logo-160.png)
+![logo](https://raw.githubusercontent.com/Build-The-Web/time-tunnel/master/static/img/logo-160.png)
 An event collection and dispatching µservice.
 
 ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
-[![Travis CI](https://api.travis-ci.org/Feed-The-Web/time-tunnel.svg)](https://travis-ci.org/Feed-The-Web/time-tunnel)
+[![Travis CI](https://api.travis-ci.org/Build-The-Web/time-tunnel.svg)](https://travis-ci.org/Build-The-Web/time-tunnel)
 
 
 ## Overview
@@ -21,7 +21,7 @@ There's a set of built-in implementations for both delivery APIs and event sinks
 be extended with custom ones via a plugin system.
 `time-tunnel` is implemented using Python (tested on 2.7 and 3.4) and Flask+WSME.
 
-![System Landscape](https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/system-landscape.png)
+![System Landscape](https://raw.githubusercontent.com/Build-The-Web/time-tunnel/master/static/img/system-landscape.png)
 
 
 ## Events
@@ -48,13 +48,13 @@ Any additional number of fields can be included.
 To create a development environment, use these commands:
 
 ```sh
-git clone "https://github.com/Feed-The-Web/time-tunnel.git"
+git clone "https://github.com/Build-The-Web/time-tunnel.git"
 cd time-tunnel
 . .env # answer the prompt with (y)es
 invoke build --docs
 ```
 
-See [CONTRIBUTING](https://github.com/Feed-The-Web/time-tunnel/blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING](https://github.com/Build-The-Web/time-tunnel/blob/master/CONTRIBUTING.md)
 for details on how to give back your improvements and fixes to upstream, so every user can benefit from them.
 
 
