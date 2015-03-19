@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Time-tunnel : An event collection and dispatching µservice.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Time-tunnel</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Build-The-Web/time-tunnel">View on GitHub</a>
+
+          <h1 id="project_title">Time-tunnel</h1>
+          <h2 id="project_tagline">An event collection and dispatching µservice.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Build-The-Web/time-tunnel/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Build-The-Web/time-tunnel/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><img src="https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/logo-160.png" alt="logo"></p>
+
+<p><img src="http://img.shields.io/badge/license-Apache_2.0-red.svg" alt="Apache 2.0 licensed">
+<a href="https://travis-ci.org/Feed-The-Web/time-tunnel"><img src="https://api.travis-ci.org/Feed-The-Web/time-tunnel.svg" alt="Travis CI"></a></p>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p><code>time-tunnel</code> accepts timestamped events with loosely defined semantics over a set of common APIs,
+and then dispatches those events on a best-effort basis
+to various event sinks according to a ruleset that is part of the configuration.</p>
+
+<p>The main goal is to offer clients a way to easily push their events to <em>one</em> uniform event submission API of their choosing,
+and then go back and concentrate on their actual task. Once those events hit the dispatcher,
+they can be filtered and duplicated according to the needs of the event sinks.</p>
+
+<p>There's a set of built-in implementations for both delivery APIs and event sinks, and they can
+be extended with custom ones via a plugin system.
+<code>time-tunnel</code> is implemented using Python (tested on 2.7 and 3.4) and Flask+WSME.</p>
+
+<p><img src="https://raw.githubusercontent.com/Feed-The-Web/time-tunnel/master/static/img/system-landscape.png" alt="System Landscape"></p>
+
+<h2>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events</h2>
+
+<p>The canonical representation of an event is a flat JSON object with the following fields.</p>
+
+<ul>
+<li>
+<code>timestamp</code> – The timestamp of this event in ISO-8601 format.</li>
+<li>
+<code>kind</code> – An URN specifying the type of this event.</li>
+<li>
+<code>message</code> – Human readable description.</li>
+<li>
+<code>source</code> – An URN or URL specifying the exact location of the event source (e.g. a deployed webapp).</li>
+<li>
+<code>severity</code> – Importance of alarms or log entries.</li>
+<li>
+<code>view_link</code> – URL of a view in the source system.</li>
+<li>
+<code>ack_link</code> – URL for acknowledging alarm events.</li>
+</ul>
+
+<p><code>timestamp</code>, <code>kind</code> and <code>message</code> are obligatory,
+but <code>timestamp</code> is added server-side when it's missing,
+and <code>kind</code> defaults to <code>unknown</code>.
+All other fields are optional, but if the semantics fit, the field name as defined above should be used.
+Any additional number of fields can be included.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To create a development environment, use these commands:</p>
+
+<div class="highlight highlight-sh"><pre>git clone <span class="pl-s1"><span class="pl-pds">"</span>https://github.com/Feed-The-Web/time-tunnel.git<span class="pl-pds">"</span></span>
+<span class="pl-s3">cd</span> <span class="pl-k">time</span>-tunnel
+<span class="pl-s3">.</span> .env <span class="pl-c"># answer the prompt with (y)es</span>
+invoke build --docs</pre></div>
+
+<p>See <a href="https://github.com/Feed-The-Web/time-tunnel/blob/master/CONTRIBUTING.md">CONTRIBUTING</a>
+for details on how to give back your improvements and fixes to upstream, so every user can benefit from them.</p>
+
+<h2>
+<a id="related-projects" class="anchor" href="#related-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Related Projects</h2>
+
+<p><strong>Event sources + sinks</strong></p>
+
+<ul>
+<li><a href="https://github.com/hipchat">HipChat</a></li>
+<li><a href="https://github.com/influxdb">InfluxDB</a></li>
+<li><a href="https://github.com/getsentry/sentry">Sentry</a></li>
+<li><a href="https://github.com/etsy/statsd">StatsD</a></li>
+<li><a href="https://github.com/fluent/fluentd">Fluentd</a></li>
+<li><a href="https://github.com/nir0s/feedr">feedr</a></li>
+<li><a href="https://github.com/josegonzalez/python-beaver">python-beaver</a></li>
+</ul>
+
+<p><strong>Visualization / UI</strong></p>
+
+<ul>
+<li><a href="https://github.com/marmelab/EventDrops">EventDrops</a></li>
+<li><a href="https://github.com/google/timesketch">Timesketch</a></li>
+<li><a href="https://github.com/Dieterbe/anthracite">Anthracite</a></li>
+</ul>
+
+<h2>
+<a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p><a href="https://github.com/1and1"><img src="https://raw.githubusercontent.com/1and1/1and1.github.io/master/images/1and1-logo-42.png" alt="1&amp;1"></a>  Project sponsored by <a href="https://github.com/1and1">1&amp;1</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Time-tunnel maintained by <a href="https://github.com/Build-The-Web">Build-The-Web</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
