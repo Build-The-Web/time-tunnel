@@ -73,6 +73,7 @@ for details on how to give back your improvements and fixes to upstream, so ever
 * [Fluentd](https://github.com/fluent/fluentd)
 * [feedr](https://github.com/nir0s/feedr)
 * [python-beaver](https://github.com/josegonzalez/python-beaver)
+* [TeaFiles](https://github.com/discretelogics/TeaFiles.Py)
 
 **Visualization / UI**
 
