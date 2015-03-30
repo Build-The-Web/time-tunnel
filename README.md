@@ -74,6 +74,7 @@ for details on how to give back your improvements and fixes to upstream, so ever
 * [feedr](https://github.com/nir0s/feedr)
 * [python-beaver](https://github.com/josegonzalez/python-beaver)
 * [TeaFiles](https://github.com/discretelogics/TeaFiles.Py)
+* [Graphite Beacon](https://github.com/klen/graphite-beacon)
 
 **Visualization / UI**
 
