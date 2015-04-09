@@ -36,7 +36,7 @@ They adapt to/from the internal event model, so that (hopefully) any connection 
 ### Exit Portals
 
  * :soon: HipChat
- * :soon: WebHooks (i.e. Jenkins Job triggers)
+ * :soon: WebHooks (e.g. Jenkins Job triggers)
 
 
 ## Events
