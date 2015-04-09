@@ -24,6 +24,21 @@ be extended with custom ones via a plugin system.
 ![System Landscape](https://raw.githubusercontent.com/Build-The-Web/time-tunnel/master/static/img/system-landscape.png)
 
 
+## Portals
+
+Events enter or exit the system via portals, which normally take the form of some API endpoint implementation.
+They adapt to/from the internal event model, so that (hopefully) any connection between them is possible.
+
+### Entry Portals
+
+ * :soon: GitLab Web Hook
+
+### Exit Portals
+
+ * :soon: HipChat
+ * :soon: WebHooks (i.e. Jenkins Job triggers)
+
+
 ## Events
 
 The canonical representation of an event is a flat JSON object with the following fields.
