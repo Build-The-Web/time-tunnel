@@ -3,8 +3,9 @@
 ![logo](https://raw.githubusercontent.com/Build-The-Web/time-tunnel/master/static/img/logo-160.png)
 An event collection and dispatching µservice.
 
-![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
-[![Travis CI](https://api.travis-ci.org/Build-The-Web/time-tunnel.svg)](https://travis-ci.org/Build-The-Web/time-tunnel)
+ [![Groups](https://img.shields.io/badge/Google_groups-btw--users-orange.svg)](https://groups.google.com/forum/#!forum/btw-users)
+ ![Apache 2.0 licensed](http://img.shields.io/badge/license-Apache_2.0-red.svg)
+ [![Travis CI](https://api.travis-ci.org/Build-The-Web/time-tunnel.svg)](https://travis-ci.org/Build-The-Web/time-tunnel)
 
 
 ## Overview
